@@ -20,4 +20,5 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path("projects/", include("projects.urls")),
     path("blog/", include("blog.urls")),
+    path('', TemplateView.as_view(template_name='personal_portfolio/main.html')),
 ]
