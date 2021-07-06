@@ -4,7 +4,7 @@
     <h1>{{ post.title }}</h1>
     <small>
         {{ post.created_on.date }} |&nbsp;
-        Categories:&nbsp;
+        Категории:&nbsp;
         {% for category in post.categories.all %}
         <a href="{% url 'blog_category' category.name %}">
             {{ category.name }}
@@ -12,7 +12,7 @@
         {% endfor %}
     </small>
     <p>{{ post.body | linebreaks }}</p>
-    <h3>Leave a comment:</h3>
+    <h3>Поделиться мнением:</h3>
     <form action="/blog/{{ post.pk }}/" method="post">
         {% csrf_token %}
         <div class="form-group">
@@ -21,9 +21,9 @@
         <div class="form-group">
             {{ form.body }}
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-primary">Отправить</button>
     </form>
-    <h3>Comments:</h3>
+    <h3>Мнения:</h3>
     {% for comment in comments %}
     <p>
         On {{comment.created_on.date }}&nbsp;
