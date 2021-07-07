@@ -3,5 +3,5 @@ body {
 }
 
 .nav-link {
-    text-decoration: underline;
+    text-decoration: underline !important;
 }
