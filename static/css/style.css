@@ -7,16 +7,21 @@ body {
     color: rgb(160, 160, 160) !important;
 }
 
+.nav-link:hover {
+    text-decoration: none !important;
+    color: coral !important;
+}
+
 .main-header {
     margin: 20px 0px 20px 0px;
 }
 
 .long-link {
     text-decoration: underline;
-    color:coral;
+    color:rgb(160, 160, 160);
 }
 
 .long-link:hover {
     text-decoration: none;
-    color:crimson;
+    color:coral;
 }
