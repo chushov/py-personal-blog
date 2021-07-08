@@ -4,9 +4,19 @@ body {
 
 .nav-link {
     text-decoration: underline !important;
-    color: #333;
+    color: rgb(160, 160, 160) !important;
 }
 
 .main-header {
     margin: 20px 0px 20px 0px;
+}
+
+.long-link {
+    text-decoration: underline;
+    color:coral;
+}
+
+.long-link:hover {
+    text-decoration: none;
+    color:crimson;
 }
