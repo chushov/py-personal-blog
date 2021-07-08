@@ -1,15 +1,15 @@
 {% extends "base.html" %}
 {% block page_content %}
 <div class="col-md-8 offset-md-2">
-    <h1>{{ category | title }}</h1>
+    <h1 class="main-header">{{ category | title }}</h1>
     <hr>
     {% for post in posts %}
-        <h2><a href="{% url 'blog_detail' post.pk%}">{{ post.title }}</a></h2>
+        <h2 class="main-header"><a href="{% url 'blog_detail' post.pk%}">{{ post.title }}</a></h2>
         <small>
             {{ post.created_on.date }} |&nbsp;
             Категории:&nbsp;
             {% for category in post.categories.all %}
-            <a href="{% url 'blog_category' category.name %}">
+            <a class="category-link" href="{% url 'blog_category' category.name %}">
                 {{ category.name }}
             </a>&nbsp;
             {% endfor %}
