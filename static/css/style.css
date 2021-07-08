@@ -4,4 +4,9 @@ body {
 
 .nav-link {
     text-decoration: underline !important;
+    color: #333;
+}
+
+.main-header {
+    margin: 20px 0px 20px 0px;
 }
