@@ -117,8 +117,8 @@ USE_TZ = True
 
 STATIC_DIR = os.path.join(BASE_DIR, "static")
 STATICFILES_DIRS = [
-    STATIC_DIR,
+    STATIC_DIR, 
 ]
-STATIC_URL = "/static/img/"
+STATIC_URL = "static/"
 
 DEFAULT_AUTO_FIELD = "django.db.models.AutoField"
