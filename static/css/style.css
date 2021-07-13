@@ -3,7 +3,6 @@ body {
 }
 
 .nav-link {
-    text-decoration: underline !important;
     color: rgb(160, 160, 160) !important;
 }
 
