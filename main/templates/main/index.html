@@ -1,11 +1,20 @@
 {% extends "base.html" %}
 
 {% block page_content %}
-      <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
-        <div class="col-md-5 p-lg-5 mx-auto my-5">
-          <h1 class="display-4 font-weight-normal">Web-developing</h1>
-          <p class="lead font-weight-normal">And an even wittier subheading to boot. Jumpstart your marketing efforts with this example based on Apple's marketing pages.</p>
-          <a class="btn btn-outline-secondary" href="{% url 'project_index' %}">All projects</a>
+      <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center main-bg-light">
+        <div class="col-md-6 p-lg-6 mx-auto my-6">
+          <h1 class="display-4 font-weight-bold">Dmitry Chushóv</h1>
+          <p class="lead font-weight-light header-block-text">
+            I have been engaged in Internet projects, design, web development and promotion for 15 years.
+          </p>
+          <p class="lead font-weight-light header-block-text">
+            If you need the design of websites, mobile applications, catalogs, advertising or logos, I will help you.
+          </p>
+          <p class="lead font-weight-light header-block-text">
+            I am engaged in setting up advertising campaigns in contextual networks and will prepare
+            your project for SEO promotion on the Internet.
+          </p>
+          <a class="btn btn-sandybrown" href="{% url 'project_index' %}">Get in Touch</a>
         </div>
         <div class="product-device box-shadow d-none d-md-block"></div>
         <div class="product-device product-device-2 box-shadow d-none d-md-block"></div>
@@ -78,49 +87,50 @@
           <div class="bg-white box-shadow mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div>
         </div>
       </div>
-  
+
+
       <footer class="container py-5">
+          <div class="contact">
+          <p>Пишите письма</p>
+          <div class="email">
+            <a href="mailto:work@chushov.com">work@chushov.com</a>
+          </div>
+        </div>
         <div class="row">
           <div class="col-12 col-md">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="d-block mb-2"><circle cx="12" cy="12" r="10"></circle><line x1="14.31" y1="8" x2="20.05" y2="17.94"></line><line x1="9.69" y1="8" x2="21.17" y2="8"></line><line x1="7.38" y1="12" x2="13.12" y2="2.06"></line><line x1="9.69" y1="16" x2="3.95" y2="6.06"></line><line x1="14.31" y1="16" x2="2.83" y2="16"></line><line x1="16.62" y1="12" x2="10.88" y2="21.94"></line></svg>
-            <small class="d-block mb-3 text-muted">&copy; 2017-2018</small>
+            <small class="d-block mb-3 text-muted">&copy; 2004 — 2021</small>
           </div>
           <div class="col-6 col-md">
-            <h5>Features</h5>
+            <h5 class="highlight-color">Social</h5>
             <ul class="list-unstyled text-small">
-              <li><a class="text-muted" href="#">Cool stuff</a></li>
-              <li><a class="text-muted" href="#">Random feature</a></li>
-              <li><a class="text-muted" href="#">Team feature</a></li>
-              <li><a class="text-muted" href="#">Stuff for developers</a></li>
-              <li><a class="text-muted" href="#">Another one</a></li>
-              <li><a class="text-muted" href="#">Last time</a></li>
+              <li><a class="text-muted" href="#">LinkedIn</a></li>
+              <li><a class="text-muted" href="https://www.instagram.com/dmitrychushov/">Instagram</a></li>
+              <li><a class="text-muted" href="https://www.facebook.com/dmitry.chushov">Facebook</a></li>
+              <li><a class="text-muted" href="https://www.goodreads.com/dmitrychushov">Goodreads</a></li>
+              <li><a class="text-muted" href="https://www.behance.net/chushov">Behance</a></li>
+              <li><a class="text-muted" href="https://soundcloud.com/chushov">Soundcloud</a></li>
             </ul>
           </div>
           <div class="col-6 col-md">
-            <h5>Resources</h5>
+            <h5 class="highlight-color">Tools</h5>
             <ul class="list-unstyled text-small">
-              <li><a class="text-muted" href="#">Resource</a></li>
-              <li><a class="text-muted" href="#">Resource name</a></li>
-              <li><a class="text-muted" href="#">Another resource</a></li>
-              <li><a class="text-muted" href="#">Final resource</a></li>
+              <li><a class="text-muted" href="#">Password Generator</a></li>
+              <li><a class="text-muted" href="#">Roulette</a></li>
             </ul>
           </div>
           <div class="col-6 col-md">
-            <h5>Resources</h5>
+            <h5 class="highlight-color">Playlists</h5>
             <ul class="list-unstyled text-small">
-              <li><a class="text-muted" href="#">Business</a></li>
-              <li><a class="text-muted" href="#">Education</a></li>
-              <li><a class="text-muted" href="#">Government</a></li>
-              <li><a class="text-muted" href="#">Gaming</a></li>
+              <li><a class="text-muted" href="#">Spotify</a></li>
+              <li><a class="text-muted" href="#">Yandex.Music</a></li>
             </ul>
           </div>
           <div class="col-6 col-md">
-            <h5>About</h5>
+            <h5 class="highlight-color">Get in touch</h5>
             <ul class="list-unstyled text-small">
-              <li><a class="text-muted" href="#">Team</a></li>
-              <li><a class="text-muted" href="#">Locations</a></li>
-              <li><a class="text-muted" href="#">Privacy</a></li>
-              <li><a class="text-muted" href="#">Terms</a></li>
+              <li><a class="text-muted" href="mailto:work@chushov.com">Email</a></li>
+              <li><a class="text-muted" href="tg:@DmitryChushov">Telegram</a></li>
+              <li><a class="text-muted" href="skype:dmitrychushov">Skype</a></li>
             </ul>
           </div>
         </div>
