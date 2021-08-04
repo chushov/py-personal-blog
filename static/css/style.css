@@ -108,3 +108,11 @@ body {
     -ms-user-select: text;
     user-select: text;
 }
+
+.section-text-color {
+    color:white;
+}
+
+.section-padding {
+    margin-top:50px;
+}
