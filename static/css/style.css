@@ -54,20 +54,19 @@ body {
 
 .logo-here {
     background: no-repeat url("/static/img/~logo.png");
-    color: white !important;
+    color: #678 !important;
 }
 
 .highlight-color {
     color:sandybrown;
 }
 
-.btn-sandybrown {
-    background-color: rgba(85,102,170,.12);
-    color: rgba(255,255,255,.7);
+.links-highlight {
+    color:sandybrown;
 }
 
-.btn-sandybrown:hover {
-    color: grey;
+.links-highlight:hover {
+    color: #c16f29;
 }
 
 .contact {
@@ -110,7 +109,7 @@ body {
 }
 
 .section-text-color {
-    color:white;
+    color:#678;
 }
 
 .section-padding {
