@@ -67,6 +67,7 @@ body {
 
 .links-highlight:hover {
     color: #c16f29;
+    text-decoration:none;
 }
 
 .contact {

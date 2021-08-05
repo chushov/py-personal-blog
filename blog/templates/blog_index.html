@@ -1,20 +1,20 @@
 {% extends "base.html" %}
 
 {% block page_content %}
-<div class="col-md-8 offset-md-2">
-    <h1 class="main-header">Заметки</h1>
+<div class="col-md-8 offset-md-2 section-padding">
+    <h1 class="display-4 font-weight-bold section-text-color">Notes</h1>
     {% for post in posts %}
-    <h2><a href="{% url 'blog_detail' post.pk%}">{{ post.title }}</a></h2>
-    <small>
+    <h2 class="section-padding"><a class="links-highlight" href="{% url 'blog_detail' post.pk%}">{{ post.title }}</a></h2>
+    <p class="section-text-color">{{ post.body | slice:":350" }}…</p>
+    <small class="section-text-color">
         {{ post.created_on.date }} |&nbsp;
         Категории:&nbsp;
         {% for category in post.categories.all %}
-        <a class="category-link" href="{% url 'blog_category' category.name %}">
+        <a class="category-link section-text-color" href="{% url 'blog_category' category.name %}">
             {{ category.name }}
         </a>&nbsp;
         {% endfor %}
     </small>
-    <p>{{ post.body | slice:":350" }}…</p>
     {% endfor %}
 </div>
 {% endblock %}

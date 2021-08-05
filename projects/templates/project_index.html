@@ -2,7 +2,7 @@
 {% load static %}
 {% block page_content %}
 <div class="col-md-8 offset-md-2 section-padding">
-    <h1 class="display-4 font-weight-bold section-text-color">Проекты</h1>
+    <h1 class="display-4 font-weight-bold section-text-color">Projects</h1>
     <div class="row">
     {% for project in projects %}
         <div class="col-md-4 section-padding">
@@ -13,7 +13,7 @@
                     <p class="card-text">{{ project.description }}</p>
                     <a href="{% url 'project_detail' project.pk %}"
                     class="btn btn-light">
-                        Весь кейс
+                        More
                     </a>
                 </div>
             </div>

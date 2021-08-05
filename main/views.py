@@ -1,6 +1,7 @@
 from django.views.generic import TemplateView
 from projects.models import Project
 
+
 class Homepage(TemplateView):
     template_name = "main/index.html"
 
