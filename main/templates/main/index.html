@@ -52,12 +52,12 @@
     </div>
     <div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
     <div class="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden" style="width:100%;">
-        {% for project in projects %}
       <div class="my-3 p-3">
+      {% for project in projects %}
         <h2 class="display-5">{{ project.title }}</h2>
         <p class="lead">{{ project.description }}</p>
+      {% endfor %}
       </div>
-        {% endfor %}
       <div class="bg-dark box-shadow mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div>
     </div>
     <div class="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden" style="width:100%;">
@@ -115,4 +115,5 @@
       </div>
     </div>
     </footer>
+
 {% endblock %}

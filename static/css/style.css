@@ -53,7 +53,7 @@ body {
 }
 
 .logo-here {
-    background: no-repeat url("/static/img/~logo.png");
+    /* background: no-repeat url("/static/img/~logo.png"); */
     color: #678 !important;
 }
 

@@ -1,11 +1,11 @@
 {% extends "base.html" %}
 {% load static %}
 {% block page_content %}
-<div class="col-md-8 offset-md-2">
-    <h1 class="main-header">Проекты</h1>
+<div class="col-md-8 offset-md-2 section-padding">
+    <h1 class="display-4 font-weight-bold section-text-color">Проекты</h1>
     <div class="row">
     {% for project in projects %}
-        <div class="col-md-4">
+        <div class="col-md-4 section-padding">
             <div class="card mb-2">
                 <img class="card-img-top" src="{% static project.image %}">
                 <div class="card-body">
