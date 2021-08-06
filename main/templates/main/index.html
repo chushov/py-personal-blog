@@ -3,42 +3,41 @@
 {% block page_content %}
 {% for project in projects %}
 
-    <div class="section section-text-color section-padding">
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-6 col-md-12">
-                    <h1 class="display-4 font-weight-bold">Dmitry Chushóv</h1>
-                </div>
+<div class="section section-text-color section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-6 col-md-12">
+                <h1 class="display-4 font-weight-bold">Dmitry Chushóv</h1>
             </div>
         </div>
     </div>
-    </br></br>
-    <div class="section section-text-color">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <span class="descr"><p>15 лет занимаюсь интернет-проектами, дизайном, веб-разработкой и продвижением.</p></span>
-                    <span class="descr"><p>Если вам нужен дизайн сайтов, мобильных приложений, каталогов, рекламы или логотипов — я помогу.</p></span>
-                    <span class="descr"><p>Занимаюсь настройкой рекламных кампаний в контекстных сетях и подготоволю ваш проект для SEO-продвижения в интернете.</p></span></br></br>
-                </div>
-                <div class="col-md-6">
-                    <span class="descr">&nbsp;Интернет-банк в <a href="https://www.bank-hlynov.ru/" class="links-highlight" target="_blank">Банк Хлынов</a></span></br>
-                    <span class="descr">&nbsp;Канал в Телеграме <a href="https://t-do.ru/anythingyousynthesize" class="links-highlight" target="_blank">Anything You Synthesize</a></span></br>
-                    <span class="descr"><s>&nbsp;Техно-DJ и дизайнер в <a href="https://vk.com/hardiology" class="links-highlight" target="_blank">Hardiology Radioshow</a></s	></span></br>
-                    <span class="descr"><s>&nbsp;Интернет-проекты в <a href="http://divany-mz5.ru/" class="links-highlight" target="_blank">MZ5 Group</a></s></span></br>
-                    <span class="descr"><s>&nbsp;Технический директор в <a href="https://vk.com/rntimediagroup" class="links-highlight" target="_blank">RNTI Media Group</a></s></span></br>
-                    <span class="descr"><s>&nbsp;Организация мероприятий в «SAFEMODE PROMO»</s></span></br>
-                    <span class="descr"><s>&nbsp;Организация рок-концертов в «Альтконе»</s></span>
-
-                </div>
+</div>
+</br></br>
+<div class="section section-text-color">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <span class="descr"><p>15 лет занимаюсь интернет-проектами, дизайном, веб-разработкой и продвижением.</p></span>
+                <span class="descr"><p>Если вам нужен дизайн сайтов, мобильных приложений, каталогов, рекламы или логотипов — я помогу.</p></span>
+                <span class="descr"><p>Занимаюсь настройкой рекламных кампаний в контекстных сетях и подготоволю ваш проект для SEO-продвижения в интернете.</p></span></br></br>
+            </div>
+            <div class="col-md-6">
+                <span class="descr">&nbsp;Интернет-банк в <a href="https://www.bank-hlynov.ru/" class="links-highlight" target="_blank">Банк Хлынов</a></span></br>
+                <span class="descr">&nbsp;Канал в Телеграме <a href="https://t-do.ru/anythingyousynthesize" class="links-highlight" target="_blank">Anything You Synthesize</a></span></br>
+                <span class="descr"><s>&nbsp;Техно-DJ и дизайнер в <a href="https://vk.com/hardiology" class="links-highlight" target="_blank">Hardiology Radioshow</a></s	></span></br>
+                <span class="descr"><s>&nbsp;Интернет-проекты в <a href="http://divany-mz5.ru/" class="links-highlight" target="_blank">MZ5 Group</a></s></span></br>
+                <span class="descr"><s>&nbsp;Технический директор в <a href="https://vk.com/rntimediagroup" class="links-highlight" target="_blank">RNTI Media Group</a></s></span></br>
+                <span class="descr"><s>&nbsp;Организация мероприятий в «SAFEMODE PROMO»</s></span></br>
+                <span class="descr"><s>&nbsp;Организация рок-концертов в «Альтконе»</s></span>
             </div>
         </div>
     </div>
+</div>
   
-    <div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
+<div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
     <div class="bg-dark mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden" style="width:100%;">
       <div class="my-3 py-3">
-        <a href="{% url 'project_detail' project.pk %}"
+        <a href="{% url 'project_detail' project.pk %}">
         <h2 class="display-5">{{ project.title }}</h2>
         <p class="lead">{{ project.description }}</p>
         </a>
@@ -47,36 +46,30 @@
     </div>
     <div class="bg-dark mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden" style="width:100%;">
       <div class="my-3 p-3">
-
         <h2 class="display-5">{{ project.title }}</h2>
         <p class="lead">{{ project.description }}</p>
-
       </div>
       <div class="bg-light box-shadow mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div>
     </div>
-    </div>
-    <div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
+</div>
+<div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
     <div class="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden" style="width:100%;">
       <div class="my-3 p-3">
-
         <h2 class="display-5">{{ project.title }}</h2>
         <p class="lead">{{ project.description }}</p>
-
       </div>
       <div class="bg-dark box-shadow mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div>
     </div>
     <div class="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden" style="width:100%;">
       <div class="my-3 p-3">
-
         <h2 class="display-5">{{ project.title }}</h2>
         <p class="lead">{{ project.description }}</p>
-
       </div>
       <div class="bg-dark box-shadow mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div>
     </div>
-    </div>
+</div>
 
-    <footer class="container py-5">
+<footer class="container py-5">
       <div class="contact">
       <p>Пишите письма</p>
       <div class="email">
