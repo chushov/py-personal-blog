@@ -1,7 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
 {% block page_content %}
-{% for project in projects %}
 
 <div class="section section-text-color section-padding">
     <div class="container">
@@ -12,8 +11,8 @@
         </div>
     </div>
 </div>
-</br></br>
-<div class="section section-text-color">
+
+<div class="section section-text-color section-padding">
     <div class="container">
         <div class="row">
             <div class="col-md-6">
@@ -33,42 +32,19 @@
         </div>
     </div>
 </div>
-  
+{% for project in projects %}
 <div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
     <div class="bg-dark mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden" style="width:100%;">
       <div class="my-3 py-3">
         <a href="{% url 'project_detail' project.pk %}">
-        <h2 class="display-5">{{ project.title }}</h2>
-        <p class="lead">{{ project.description }}</p>
+            <h2 class="display-5">{{ project.title }}</h2>
+            <p class="lead">{{ project.description }}</p>
         </a>
       </div>
       <div class="bg-light box-shadow mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div>
     </div>
-    <div class="bg-dark mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden" style="width:100%;">
-      <div class="my-3 p-3">
-        <h2 class="display-5">{{ project.title }}</h2>
-        <p class="lead">{{ project.description }}</p>
-      </div>
-      <div class="bg-light box-shadow mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div>
-    </div>
 </div>
-<div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
-    <div class="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden" style="width:100%;">
-      <div class="my-3 p-3">
-        <h2 class="display-5">{{ project.title }}</h2>
-        <p class="lead">{{ project.description }}</p>
-      </div>
-      <div class="bg-dark box-shadow mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div>
-    </div>
-    <div class="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden" style="width:100%;">
-      <div class="my-3 p-3">
-        <h2 class="display-5">{{ project.title }}</h2>
-        <p class="lead">{{ project.description }}</p>
-      </div>
-      <div class="bg-dark box-shadow mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div>
-    </div>
-</div>
-
+{% endfor %}
 <footer class="container py-5">
       <div class="contact">
       <p>Пишите письма</p>
@@ -116,5 +92,4 @@
     </div>
     </footer>
 
-{% endfor %}
 {% endblock %}
