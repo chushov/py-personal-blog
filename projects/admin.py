@@ -22,6 +22,12 @@ class ProjectAdminForm(ModelForm):
             raise ValidationError('Картинка слишком маленькая :-(')
         return image
 
+    def clean_title(self):
+        title = self.cleaned_data['title']
+        if len(title) < 3:
+            raise ValidationError('Заголовок должен быть самодостаточным')
+        return title
+
 
 class ProjectAdmin(admin.ModelAdmin):
     form = ProjectAdminForm
