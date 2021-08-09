@@ -1,26 +1,26 @@
-from django.forms import ModelForm
+from django.forms import ModelForm, ValidationError
 from django.contrib import admin
 from projects.models import Project
+
+from PIL import Image
 
 
 class ProjectAdminForm(ModelForm):
 
-    MIN_RESOLUTION = (200, 200)
+    MIN_RESOLUTION = (400, 400)
 
     def __init__(self, *args, **kwargs):
         super(ProjectAdminForm, self).__init__(*args, **kwargs)
-        instance = kwargs.get('instance')
-        if instance and not instance.sd:
-            self.fields['sd_volume_max'].widget.attrs.update({
-                'readonly': True, 'style': 'background: lightgray;'
-            })
-        self.fields['image'].help_text = 'Файлы в формате png, jpg. Минимальный размер изображения {} x {}'.format(
+        self.fields['image'].help_text = 'Формат картинок: png, jpg. Минимальный размер изображения {} x {}'.format(
             *self.MIN_RESOLUTION)
 
-    def clean(self):
-        if not self.cleaned_data['sd']:
-            self.cleaned_data['sd_volume_max'] = None
-        return self.cleaned_data
+    def clean_image(self):
+        image = self.cleaned_data['image']
+        img = Image.open(image)
+        min_height, min_width = self.MIN_RESOLUTION
+        if img.height < min_height or img.width < min_width:
+            raise ValidationError('Картинка слишком маленькая :-(')
+        return image
 
 
 class ProjectAdmin(admin.ModelAdmin):
