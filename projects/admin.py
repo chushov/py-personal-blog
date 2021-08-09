@@ -11,8 +11,11 @@ class ProjectAdminForm(ModelForm):
 
     def __init__(self, *args, **kwargs):
         super(ProjectAdminForm, self).__init__(*args, **kwargs)
-        self.fields['image'].help_text = 'Формат картинок: png, jpg. Минимальный размер изображения {} x {}'.format(
+        self.fields['image'].help_text = 'Формат картинок: png, jpg.<br>Минимальный размер изображения {} x {}'.format(
             *self.MIN_RESOLUTION)
+        self.fields['title'].help_text = 'Самодостаточный заголовок, от 3 символов и более.<br>' \
+                                         '<a target="_blank" href="https://bureau.ru/bb/soviet/20150201/">Правила ' \
+                                         'заголовков Бюро</a> '
 
     def clean_image(self):
         image = self.cleaned_data['image']
