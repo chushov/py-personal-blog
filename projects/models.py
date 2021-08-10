@@ -12,7 +12,7 @@ class Project(models.Model):
         verbose_name_plural = "Проекты"
 
     def __str__(self):
-        return self.title
+        return f"{self.title} | {self.technology}"
 
     def get_model_name(self):
         return self.__class__.__name__.lower()
